@@ -1,0 +1,279 @@
+
+@import "http://f.fontdeck.com/s/css/85KWbK2o4t6U7ij4tCKK2xJ7L3E/localhost/32437.css";
+
+$font-family-sans-serif:  "Calluna Sans Regular", sans-serif !default;
+$font-family-serif:       "Calluna Regular", serif !default;
+$font-family-base:        $font-family-serif !default;
+
+$font-size-base:  18px;
+
+$line-height-base: 1.4;
+
+$text-color: black;
+$brand-primary: #ff3333;
+$brand-secondary: #8080ff;
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default;
+$font-size-h2:            floor(($font-size-base * 2.3)) !default;
+$font-size-h3:            ceil(($font-size-base * 1.68)) !default;
+$font-size-h4:            ceil(($font-size-base * 1.3)) !default;
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.82)) !default;
+
+$btn-default-color:              black !default;
+$btn-default-bg:                 white !default;
+$btn-default-border:             rgba(black, 0.5) !default;
+
+$btn-primary-color:              black !default;
+$btn-primary-bg:                 rgba(white, 0) !default;
+$btn-primary-border:             $brand-primary !default;
+
+
+
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+// Reset
+@import "bootstrap/normalize";
+@import "bootstrap/print";
+
+// Core CSS
+@import "bootstrap/scaffolding";
+@import "bootstrap/type";
+@import "bootstrap/code";
+@import "bootstrap/grid";
+@import "bootstrap/tables";
+@import "bootstrap/forms";
+@import "bootstrap/buttons";
+
+// Components
+@import "bootstrap/component-animations";
+@import "bootstrap/glyphicons";
+@import "bootstrap/dropdowns";
+@import "bootstrap/button-groups";
+@import "bootstrap/input-groups";
+@import "bootstrap/navs";
+@import "bootstrap/navbar";
+@import "bootstrap/breadcrumbs";
+@import "bootstrap/pagination";
+@import "bootstrap/pager";
+@import "bootstrap/labels";
+@import "bootstrap/badges";
+@import "bootstrap/jumbotron";
+@import "bootstrap/thumbnails";
+@import "bootstrap/alerts";
+@import "bootstrap/progress-bars";
+@import "bootstrap/media";
+@import "bootstrap/list-group";
+@import "bootstrap/panels";
+@import "bootstrap/wells";
+@import "bootstrap/close";
+
+// Components w/ JavaScript
+@import "bootstrap/modals";
+@import "bootstrap/tooltip";
+@import "bootstrap/popovers";
+@import "bootstrap/carousel";
+
+// Utility classes
+@import "bootstrap/utilities";
+@import "bootstrap/responsive-utilities";
+
+body{
+  background-image: url("/images/background01.jpg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 1300px;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+}
+
+.header {
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 2em;
+}
+
+.name {
+  margin-top: 4px;
+}
+
+.about {
+  margin-bottom: 5em;
+  p {
+    margin-top: 2em;
+  }
+}
+
+.splash {
+  border: solid 1px $brand-primary;
+  color: $brand-primary;
+  height: auto;
+  padding-top: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.splash-red {
+  background-color: rgba(red, 0.8);
+  color: white;
+}
+
+.splash > div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.splash > div > div {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+.splash > div > div > div {
+    padding: 0 ceil($font-size-base * 2.3);
+    font-family: $font-family-sans-serif;
+    font-size: 168%;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+
+.menu {
+  font-size: ceil($font-size-base * 1.2);
+  //font-family: $font-family-sans-serif;
+  width: auto;
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px 0;
+  a {
+    display: inline-block;
+    transition: all 0.5s;
+    padding: $font-size-base * 0.9 $font-size-base * 1.2 ;
+    color: black;
+    border: solid 1px transparent;
+    border-radius: 99px;
+    &:hover {
+      border: solid 1px rgba(black, 0.2);
+      text-decoration: none;
+    }
+  }
+  .selected {
+    border: solid 1px $brand-primary;
+  }
+}
+
+.navbar {
+  background-color: rgba(white, 0);
+  border: none;
+}
+
+.navbar-white {
+  transition: all 0.5s;
+  margin-top: -80px;
+  background-color: rgba(white, 0.95);
+  box-shadow: (0 0 0 1px rgba(black, 0.2));
+}
+
+.navbar-white-show {
+  margin-top: 0px;
+}
+
+.navbar-transparent {
+  width: 100%;
+  padding-top: 4em;
+}
+
+.lines {
+  padding: 12px 0px;
+  border-top: solid 1px red;
+  border-bottom: solid 1px red;
+}
+
+.work {
+  margin-top: 1.6em;
+  margin-bottom: 3em;
+
+  h4 {  
+    font-family: $font-family-sans-serif;
+    font-size: 168%;
+    transition: all 0.5s;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    margin-top: -30px;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  img {
+    transition: all 0.5s;
+    opacity: 1;
+    &:hover {
+      opacity: 0.25;
+    }
+  }
+
+}
+
+.crop {
+  display: block;
+  position: relative;
+  background-color: red;
+}
+
+
+.crop:hover > h4 {
+  opacity: 1;
+}
+
+.list-unstyled {
+  margin: 0;
+  .year {
+    font-weight: bold;
+    margin-top: 1em;
+  }
+}
+
+.recognition {
+  margin-bottom: 3em;
+}
+
+.contact {
+  margin-top: 1.6em;
+}
+
+
+footer {
+  border-top: solid 1px rgba(black, 0.1);
+  margin-top: 100px;
+  padding: 2em 0px;
+  font-size: 80%;
+  p {
+    display: inline-block;
+    color: rgba(black, 0.5);
+  }
+}
+
+.mill {
+  position: fixed;
+  display: block;
+  z-index: 1;
+  top: -25%;
+  width: 100%;
+  height: 150%;
+}
+
