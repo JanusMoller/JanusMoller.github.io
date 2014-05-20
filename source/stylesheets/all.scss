@@ -1,6 +1,18 @@
 
 @import "http://f.fontdeck.com/s/css/85KWbK2o4t6U7ij4tCKK2xJ7L3E/localhost/32437.css";
 
+@font-face {
+    font-family: 'socicon';
+    src: url('/fonts/socicon-webfont.eot');
+    src: url('/fonts/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/socicon-webfont.woff') format('woff'),
+         url('/fonts/socicon-webfont.ttf') format('truetype'),
+         url('/fonts/socicon-webfont.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 $font-family-sans-serif:  "Calluna Sans Regular", sans-serif !default;
 $font-family-serif:       "Calluna Regular", serif !default;
 $font-family-base:        $font-family-serif !default;
@@ -109,40 +121,91 @@ body{
   }
 }
 
-.splash {
+.circle {
+  display: block;
   border: solid 1px $brand-primary;
-  color: $brand-primary;
   height: auto;
   padding-top: 100%;
   width: 100%;
   border-radius: 50%;
-}
-
-.splash-red {
-  background-color: rgba(red, 0.8);
-  color: white;
-}
-
-.splash > div {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-}
-.splash > div > div {
-    display: table;
-    width: 100%;
-    height: 100%;
-}
-.splash > div > div > div {
-    padding: 0 ceil($font-size-base * 2.3);
+  transition: all 0.5s;
+  a {
+    text-decoration: none;
+  }
+  h2 {
+    margin: 0;
+    padding-bottom: 0.25em;
+  }
+  h3 {
+    padding: 1em;
+    color: $brand-primary;
     font-family: $font-family-sans-serif;
-    font-size: 168%;
-    display: table-cell;
-    text-align: center;
-    vertical-align: middle;
+  }
 }
+
+a.circle:hover {
+  color: white;
+  background-color: $brand-primary;
+}
+
+.circle > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.circle > div > div {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.circle > div > div > div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  transition: all 0.5s;
+  color: $brand-primary;
+  &:hover {
+    color: white;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+
+.circle > div > div > div > div {
+  display: table;
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 25%;
+}
+
+.circle > div > div > div > div:nth-child(3n+1) {
+  width: 100%;
+}
+
+.circle > div > div > div > div > div {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  font-family: 'socicon' !important;
+  font-size: 150%;
+  transition: all 0.5s;
+  &:hover {
+    -webkit-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  
+}
+
+.circle-x {
+  background-image: url("/images/x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+} 
 
 
 .menu {
@@ -193,8 +256,10 @@ body{
 
 .lines {
   padding: 12px 0px;
+  padding-bottom: 16px;
   border-top: solid 1px red;
   border-bottom: solid 1px red;
+  font-family: $font-family-sans-serif;
 }
 
 .work {
@@ -202,8 +267,8 @@ body{
   margin-bottom: 3em;
 
   h4 {  
-    font-family: $font-family-sans-serif;
-    font-size: 168%;
+    //font-family: $font-family-sans-serif;
+    font-size: 133%;
     transition: all 0.5s;
     display: block;
     height: 60px;
@@ -237,6 +302,8 @@ body{
 
 
 .crop:hover > h4 {
+  -webkit-transform: scale(1.33);
+  transform: scale(1.33);
   opacity: 1;
 }
 
@@ -254,6 +321,9 @@ body{
 
 .contact {
   margin-top: 1.6em;
+  .col-md-4 {
+    padding: 15px;
+  }
 }
 
 
